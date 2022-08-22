@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CreditCardComponent implements OnInit {
   @Input ('backgroundFooter') backgroundFooter: string | undefined;
   @Input ('backgroundHeader') backgroundHeader: string | undefined;
+  @Input ('patternHeader') patternHeader: string | undefined;
+
 
   constructor() { }
 

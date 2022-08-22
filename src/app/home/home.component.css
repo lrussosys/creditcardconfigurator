@@ -1,6 +1,7 @@
-/* .container {
-  text-align: center;
-} */
+.container {
+  position: relative;
+  height: 100vh;
+}
 
 header {
   background-color: black;
@@ -16,4 +17,19 @@ header {
 
 .theme-selector-wrapper {
   background-color: rgb(249 249 249);
+}
+
+.arrow {
+    position: absolute;
+    bottom: 46px;
+    right: 29px;
+    z-index: 2;
+}
+
+.blob {
+  position: absolute;
+  bottom: -53px;
+  width: 259px;
+  fill: black;
+  right: -110px;
 }

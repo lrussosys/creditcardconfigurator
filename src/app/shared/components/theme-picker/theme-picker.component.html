@@ -1,5 +1,34 @@
-<div class="theme-wrapper">
-  <div class="theme-picker" *ngFor="let c of colors">
-    <div class="color-container" [ngStyle]="{ 'background-color': c.color }" (click)="getColor(c.color)"></div>
+<div>
+  <!-- Picker header -->
+  <div *ngIf="headerPicker" class="theme-wrapper">
+    <div class="theme-picker" *ngFor="let c of colors">
+      <div
+        class="color-container"
+        [ngStyle]="{ 'background-color': c.color }"
+        (click)="getHeaderColors(c.color)"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Picker footer -->
+  <div *ngIf="footerPicker" class="theme-wrapper">
+    <div class="theme-picker" *ngFor="let c of colors">
+      <div
+        class="color-container"
+        [ngStyle]="{ 'background-color': c.color }"
+        (click)="getFooterColor(c.color)"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Picker pattern -->
+  <div *ngIf="patternPicker" class="theme-wrapper">
+    <div class="theme-picker" *ngFor="let p of patterns">
+      <div
+        class="color-container"
+        [ngStyle]="{ 'background-image': p.pattern }"
+        (click)="getPattern(p.pattern)"
+      ></div>
+    </div>
   </div>
 </div>

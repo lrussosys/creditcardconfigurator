@@ -2,18 +2,67 @@
   <header>HEADER</header>
   <div class="card-container">
     <app-credit-card
-      [backgroundFooter]="selectedColor ? selectedColor : 'gray'"
-      [backgroundHeader]="'aqua, red, gray, yellow'"
+      [backgroundFooter]="selectedFooterColor ? selectedFooterColor : 'gray'"
+      [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : 'red'"
+      [patternHeader]="selectedPattern ? selectedPattern : 'blue'"
     ></app-credit-card>
   </div>
 
   <div class="theme-selector-wrapper">
     <div>
       <h4>Choose Colors</h4>
-      <app-theme-picker (selectedColorEmitter)="getSelectedColor($event)"></app-theme-picker>
+
+      <h5>Header</h5>
+
+      <app-theme-picker
+        (selectedHeaderColorEmitter)="getSelectedHeaderColor($event)"
+        [headerPicker]="true"
+      ></app-theme-picker>
+
+      <h5>Footer</h5>
+
+      <app-theme-picker
+        (selectedFooterColorEmitter)="getSelectedFooterColor($event)"
+        [footerPicker]="true"
+      ></app-theme-picker>
     </div>
     <div>
       <h4>Choose Pattern</h4>
+      <app-theme-picker
+        (selectedPatternEmitter)="getSelectedPattern($event)"
+        [patternPicker]="true"
+      ></app-theme-picker>
     </div>
+
+    <button (click)="saveCard()">Save Card</button>
+  </div>
+
+  <div class="arrow">
+    <a routerLink="/showCards">
+      <svg
+        width="24"
+        height="24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="white"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+      >
+        <path
+          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+        />
+      </svg>
+    </a>
+  </div>
+
+  <div class="blob">
+    <a routerLink="/showCards">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill="#000000"
+          d="M54,-57.9C62.1,-45.9,55.3,-23,54.2,-1.1C53.1,20.8,57.7,41.5,49.6,56.9C41.5,72.4,20.8,82.4,-0.4,82.8C-21.6,83.3,-43.2,74,-58.8,58.6C-74.4,43.2,-84,21.6,-80.1,4C-76.1,-13.6,-58.5,-27.2,-42.9,-39.2C-27.2,-51.2,-13.6,-61.4,4.7,-66.1C23,-70.8,45.9,-69.8,54,-57.9Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+    </a>
   </div>
 </div>
