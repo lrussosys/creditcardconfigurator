@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ShowCardsRoutingModule } from './show-cards-routing.module';
 import { ShowCardsComponent } from './show-cards.component';
+import { UiKitModule } from '../shared/ui-kit.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ShowCardsComponent } from './show-cards.component';
   ],
   imports: [
     CommonModule,
-    ShowCardsRoutingModule
+    ShowCardsRoutingModule,
+    UiKitModule,
   ]
 })
 export class ShowCardsModule { }

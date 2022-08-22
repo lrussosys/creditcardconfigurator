@@ -1,7 +1,10 @@
 <div class="container">
-  <header>HEADER</header>
+  <header>
+    Create Your <span class="highlight">&nbsp; Custom Credit &nbsp;</span> Card
+  </header>
   <div class="card-container">
     <app-credit-card
+      class="credit-card"
       [backgroundFooter]="selectedFooterColor ? selectedFooterColor : 'gray'"
       [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : 'red'"
       [patternHeader]="selectedPattern ? selectedPattern : 'blue'"
@@ -10,31 +13,36 @@
 
   <div class="theme-selector-wrapper">
     <div>
-      <h4>Choose Colors</h4>
+      <h4 class="pl-2">Choose Colors</h4>
 
-      <h5>Header</h5>
+      <h5 class="pl-2">Header</h5>
 
       <app-theme-picker
+        class="pb"
         (selectedHeaderColorEmitter)="getSelectedHeaderColor($event)"
         [headerPicker]="true"
       ></app-theme-picker>
 
-      <h5>Footer</h5>
+      <h5 class="pl-2">Footer</h5>
 
       <app-theme-picker
+        class="pb"
         (selectedFooterColorEmitter)="getSelectedFooterColor($event)"
         [footerPicker]="true"
       ></app-theme-picker>
     </div>
     <div>
-      <h4>Choose Pattern</h4>
+      <h4 class="pl-2">Choose Pattern</h4>
       <app-theme-picker
+        class="pb"
         (selectedPatternEmitter)="getSelectedPattern($event)"
         [patternPicker]="true"
       ></app-theme-picker>
     </div>
 
-    <button (click)="saveCard()">Save Card</button>
+    <div class="button">
+      <button (click)="saveCard()">Save Card</button>
+    </div>
   </div>
 
   <div class="arrow">

@@ -3,19 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { CreditCardComponent } from '../shared/components/credit-card/credit-card.component';
-import { ThemePickerComponent } from '../shared/components/theme-picker/theme-picker.component';
+import { UiKitModule } from '../shared/ui-kit.module';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CreditCardComponent,
-    ThemePickerComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    UiKitModule,
   ]
 })
 export class HomeModule { }

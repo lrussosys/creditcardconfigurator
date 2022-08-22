@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CardsService } from '../shared/services/cards.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,7 @@ export class HomeComponent implements OnInit {
   selectedPattern!: any;
 
   cards: any = [];
-  constructor() {}
+  constructor(private cardsService: CardsService) {}
 
   ngOnInit(): void {}
 
@@ -40,5 +42,8 @@ export class HomeComponent implements OnInit {
 
     this.cards.push(card)
     console.log(this.cards)
+
+    this.cardsService.cards.push(card);
+    // this.cardsService.saveCards(this.cards)
   }
 }
