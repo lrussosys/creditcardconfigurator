@@ -1,0 +1,5 @@
+<div class="theme-wrapper">
+  <div class="theme-picker" *ngFor="let c of colors">
+    <div class="color-container" [ngStyle]="{ 'background-color': c.color }" (click)="getColor(c.color)"></div>
+  </div>
+</div>

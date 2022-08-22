@@ -1,15 +1,19 @@
 <div class="container">
   <header>HEADER</header>
   <div class="card-container">
-    <app-credit-card [backgroundFooter]="'gray'" [backgroundHeader]="'aqua, red, gray, yellow'"></app-credit-card>
+    <app-credit-card
+      [backgroundFooter]="selectedColor ? selectedColor : 'gray'"
+      [backgroundHeader]="'aqua, red, gray, yellow'"
+    ></app-credit-card>
   </div>
 
-  <div>
+  <div class="theme-selector-wrapper">
     <div>
-      <p>Choose Colors</p>
+      <h4>Choose Colors</h4>
+      <app-theme-picker (selectedColorEmitter)="getSelectedColor($event)"></app-theme-picker>
     </div>
     <div>
-      <p>Choose Pattern</p>
+      <h4>Choose Pattern</h4>
     </div>
   </div>
 </div>

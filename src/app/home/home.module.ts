@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CreditCardComponent } from '../shared/components/credit-card/credit-card.component';
+import { ThemePickerComponent } from '../shared/components/theme-picker/theme-picker.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CreditCardComponent
+    CreditCardComponent,
+    ThemePickerComponent,
   ],
   imports: [
     CommonModule,
