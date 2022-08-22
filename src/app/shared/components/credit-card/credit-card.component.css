@@ -2,5 +2,31 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    background-color: aqua;
+ overflow: hidden;
+}
+.header{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.footer{
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h3{
+    padding-bottom: 1rem;
+}
+
+.header, .footer{
+    padding: 1rem;
+}
+.date{
+    text-align: left;
+}
+.cvv{
+    text-align: right;
 }
