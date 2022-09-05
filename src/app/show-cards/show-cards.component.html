@@ -1,7 +1,7 @@
 <div class="cards-wrapper">
-  <div *ngIf="cards && cards.length != ''" >
+  <div *ngIf="parseJson && parseJson?.length != ''" >
     <h2 class="title"> Your cards</h2>
-    <div *ngFor="let c of cards" class="wrapper">
+    <div *ngFor="let c of parseJson" class="wrapper">
         <app-credit-card
           [backgroundHeader]="c?.headerColor ? c?.headerColor : ''"
           [backgroundFooter]="c?.footerColor"
@@ -11,7 +11,7 @@
       </div>
   </div>
 
-  <div *ngIf="!cards.length" class="not-found">
+  <div *ngIf="!parseJson?.length" class="not-found">
     <h2 >
         No Cards Created Yet!
     </h2>

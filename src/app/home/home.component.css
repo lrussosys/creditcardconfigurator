@@ -33,6 +33,7 @@ header {
 
 .theme-selector-wrapper {
   background-color: rgb(249 249 249);
+  padding-top: 1.5rem;
 }
 
 .arrow {

@@ -64,12 +64,12 @@ export class HomeComponent implements OnInit {
         headerPattern: ''
       };
     }
-    console.log(this.card)
-    localStorage.setItem('card', this.card)
-    this.cards.push(this.card);
-    console.log(this.cards);
+    // console.log(this.card)
+    // this.cards.push(this.card);
     this.cardsService.cards.push(this.card);
-    this.router.navigate(['/showCards'])
+    console.log(this.cardsService.cards);
+    localStorage.setItem('card', JSON.stringify(this.cardsService.cards))
+    this.router.navigate(['/show-cards'])
 
     // this.cardsService.saveCards(this.cards)
   }
