@@ -14,3 +14,11 @@ a {
     text-decoration: none;
     color: rgb(0, 119, 255);
 }
+.cards-wrapper{
+ padding-top: 1rem;
+}
+.title{
+    text-align: center;
+    padding: 2rem;
+    color: #000851
+}

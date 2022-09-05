@@ -1,5 +1,6 @@
-<div>
-  <div *ngIf="cards">
+<div class="cards-wrapper">
+  <div *ngIf="cards && cards.length != ''" >
+    <h2 class="title"> Your cards</h2>
     <div *ngFor="let c of cards" class="wrapper">
         <app-credit-card
           [backgroundHeader]="c?.headerColor ? c?.headerColor : ''"
