@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardsService } from '../shared/services/cards.service';
-import { colors_palette } from '../shared/utils/constants/constants';
+import {
+  colors_palette,
+  colors_palette_header,
+} from '../shared/utils/constants/constants';
+
 
 @Component({
   selector: 'app-home',
@@ -19,7 +23,9 @@ export class HomeComponent implements OnInit {
   card:any;
   constructor(private cardsService: CardsService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   getSelectedFooterColor(e: any) {
     this.selectedFooterColor = e;

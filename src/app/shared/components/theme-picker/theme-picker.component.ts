@@ -17,7 +17,7 @@ export class ThemePickerComponent implements OnInit {
   @Input('headerPicker') headerPicker: boolean = false;
   @Input('patternPicker') patternPicker: boolean = false;
 
-  colors = colors_palette.map((c) => ({ color: c, selected: false }));
+  colors = colors_palette.map((c: any) => ({ color: c, selected: false }));
   patterns = [
     {
       pattern:
