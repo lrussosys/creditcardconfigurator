@@ -10,12 +10,16 @@ export class ShowCardsComponent implements OnInit {
   constructor(private cardsService: CardsService) {}
   prova!: any;
   cards: any = [];
+  truePattern:boolean = false
   ngOnInit(): void {
     this.getCards();
   }
 
   getCards() {
     this.cards = this.cardsService?.cards;
+    if(this.cards.headerPattern !== ''){
+      this.truePattern = true
+    }
     console.log(this.cards);
   }
 }

@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   selectedHeaderColor!: string;
   selectedPattern!: any;
   color_default = colors_palette;
+  truePattern: boolean = false
 
   cards: any = [];
   constructor(private cardsService: CardsService) {}
@@ -21,13 +22,17 @@ export class HomeComponent implements OnInit {
 
   getSelectedFooterColor(e: any) {
     this.selectedFooterColor = e;
+
   }
 
   getSelectedHeaderColor(e: any) {
     this.selectedHeaderColor = e;
+    this.truePattern = false
   }
 
   getSelectedPattern(p: any) {
+  this.truePattern = true
+
     this.selectedPattern = p;
   }
 
