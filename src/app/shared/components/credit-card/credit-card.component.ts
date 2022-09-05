@@ -1,19 +1,22 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {
+  colors_palette_footer,
+  colors_palette_header,
+} from '../../utils/constants/constants';
 
 @Component({
   selector: 'app-credit-card',
   templateUrl: './credit-card.component.html',
-  styleUrls: ['./credit-card.component.css']
+  styleUrls: ['./credit-card.component.css'],
 })
 export class CreditCardComponent implements OnInit {
-  @Input ('backgroundFooter') backgroundFooter: string | undefined;
-  @Input ('backgroundHeader') backgroundHeader: string | undefined;
-  @Input ('patternHeader') patternHeader: string | undefined;
+  colors = colors_palette_footer;
 
+  @Input('backgroundFooter') backgroundFooter: string = this.colors[0];
+  @Input('backgroundHeader') backgroundHeader: string = this.colors[2];
+  @Input('patternHeader') patternHeader: string | undefined;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
