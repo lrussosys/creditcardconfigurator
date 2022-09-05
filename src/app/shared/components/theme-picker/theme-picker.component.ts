@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { colors_palette_footer } from '../../utils/constants/constants';
+import { colors_palette } from '../../utils/constants/constants';
 
 @Component({
   selector: 'app-theme-picker',
@@ -17,7 +17,7 @@ export class ThemePickerComponent implements OnInit {
   @Input('headerPicker') headerPicker: boolean = false;
   @Input('patternPicker') patternPicker: boolean = false;
 
-  colors = colors_palette_footer.map((c: any) => ({ color: c, selected: false }));
+  colors = colors_palette.map((c: any) => ({ color: c, selected: false }));
   patterns = [
     {
       pattern:

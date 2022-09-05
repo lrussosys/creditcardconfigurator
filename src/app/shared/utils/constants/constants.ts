@@ -6,7 +6,7 @@ export const colors_palette_header = [
   '#9ADEA8',
 ];
 
-export const colors_palette_footer = [
+export const colors_palette = [
     '#14213d',
     '#3a0ca3',
     '#00b4d8',

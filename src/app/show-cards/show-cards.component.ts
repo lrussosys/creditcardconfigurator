@@ -14,7 +14,7 @@ export class ShowCardsComponent implements OnInit {
   }
 
   getCards() {
-    this.cards = this.cardsService.cards;
+    this.cards = this.cardsService?.cards;
     console.log(this.cards);
   }
 }

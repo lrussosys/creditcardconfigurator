@@ -5,9 +5,11 @@
   <div class="card-container">
     <app-credit-card
       class="credit-card"
-      [backgroundFooter]="selectedFooterColor ? selectedFooterColor : ''"
-      [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : ''"
+      [backgroundFooter]="selectedFooterColor ? selectedFooterColor : color_default[0]"
+      [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : color_default[1]"
       [patternHeader]="selectedPattern ? selectedPattern : 'blue'"
+    
+
     ></app-credit-card>
   </div>
 
@@ -74,3 +76,4 @@
     </a>
   </div>
 </div>
+<!-- [patternHeader]="selectedPattern ? selectedPattern : 'blue'" -->

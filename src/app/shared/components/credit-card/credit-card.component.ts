@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {
-  colors_palette_footer,
+  colors_palette,
   colors_palette_header,
 } from '../../utils/constants/constants';
 
@@ -10,7 +10,7 @@ import {
   styleUrls: ['./credit-card.component.css'],
 })
 export class CreditCardComponent implements OnInit {
-  colors = colors_palette_footer;
+  colors = colors_palette;
 
   @Input('backgroundFooter') backgroundFooter: string = this.colors[0];
   @Input('backgroundHeader') backgroundHeader: string = this.colors[2];
