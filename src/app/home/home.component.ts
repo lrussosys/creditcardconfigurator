@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   cards: any = [];
   card:any;
-  constructor(private cardsService: CardsService) {}
+  constructor(private cardsService: CardsService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -63,6 +63,7 @@ export class HomeComponent implements OnInit {
     this.cards.push(this.card);
     console.log(this.cards);
     this.cardsService.cards.push(this.card);
+    this.router.navigate(['/showCards'])
 
     // this.cardsService.saveCards(this.cards)
   }
