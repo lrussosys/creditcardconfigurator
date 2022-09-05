@@ -5,8 +5,8 @@
   <div class="card-container">
     <app-credit-card
       class="credit-card"
-      [backgroundFooter]="selectedFooterColor ? selectedFooterColor : colors[0]"
-      [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : colors[2]"
+      [backgroundFooter]="selectedFooterColor ? selectedFooterColor : ''"
+      [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : ''"
       [patternHeader]="selectedPattern ? selectedPattern : 'blue'"
     ></app-credit-card>
   </div>

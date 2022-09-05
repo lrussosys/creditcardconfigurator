@@ -12,16 +12,15 @@ import {
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  selectedFooterColor!: string;
-  selectedHeaderColor!: string;
-  selectedPattern!: any;
-
   colors = colors_palette_footer;
   cards: any = [];
+  selectedFooterColor: string = this.colors[0];
+  selectedHeaderColor: string = this.colors[2];
+  selectedPattern!: any;
   constructor(private cardsService: CardsService) {}
 
   ngOnInit(): void {
-    console.log('colori', this.colors)
+    console.log('colori', this.colors);
   }
 
   getSelectedFooterColor(e: any) {
@@ -30,7 +29,7 @@ export class HomeComponent implements OnInit {
 
   getSelectedHeaderColor(e: any) {
     this.selectedHeaderColor = e;
-    console.log(e)
+    console.log(e);
   }
 
   getSelectedPattern(p: any) {
@@ -43,7 +42,7 @@ export class HomeComponent implements OnInit {
     console.log(this.selectedHeaderColor);
 
     let card = {
-      headerColor: this.selectedFooterColor,
+      headerColor: this.selectedHeaderColor,
       headerPattern: this.selectedPattern,
       footerColor: this.selectedFooterColor,
     };
