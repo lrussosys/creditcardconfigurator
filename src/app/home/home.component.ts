@@ -28,12 +28,13 @@ export class HomeComponent implements OnInit {
   getSelectedHeaderColor(e: any) {
     this.selectedHeaderColor = e;
     this.truePattern = false
+    this.selectedPattern = ''
   }
 
   getSelectedPattern(p: any) {
   this.truePattern = true
-
-    this.selectedPattern = p;
+  this.selectedPattern = p;
+  this.selectedHeaderColor = '';
   }
 
   saveCard() {
@@ -43,7 +44,7 @@ export class HomeComponent implements OnInit {
 
     let card = {};
 
-    if (this.selectedPattern !== undefined) {
+    if (this.selectedPattern !== '') {
     card = {
         headerPattern: this.selectedPattern,
         footerColor: this.selectedFooterColor,

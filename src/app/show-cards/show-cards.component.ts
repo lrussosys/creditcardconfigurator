@@ -20,6 +20,7 @@ export class ShowCardsComponent implements OnInit {
     if(this.cards.headerPattern !== ''){
       this.truePattern = true
     }
+  
     console.log(this.cards);
   }
 }
