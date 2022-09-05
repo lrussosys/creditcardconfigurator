@@ -43,11 +43,11 @@ header {
 }
 
 .blob {
-  position: absolute;
-  bottom: -53px;
-  width: 259px;
-  fill: black;
-  right: -110px;
+    position: absolute;
+    bottom: -53px;
+    width: 259px;
+    fill: black;
+    right: -168px;
 }
 
 .pl-2 {
