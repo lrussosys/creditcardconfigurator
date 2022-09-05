@@ -11,3 +11,6 @@
   margin: 0 0.5rem;
   border-radius: 10px;
 }
+.selected{
+  border: 3px solid rgba(255, 255, 255, 0.514);
+}

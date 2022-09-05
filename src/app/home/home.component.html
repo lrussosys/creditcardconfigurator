@@ -5,45 +5,47 @@
   <div class="card-container">
     <app-credit-card
       class="credit-card"
-      [backgroundFooter]="selectedFooterColor ? selectedFooterColor : color_default[0]"
-      [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : color_default[2]"
+      [backgroundFooter]="selectedFooterColor ? selectedFooterColor : colorsFooter[0].color"
+      [backgroundHeader]="selectedHeaderColor ? selectedHeaderColor : colorsHeader[2].color"
       [patternHeader]="selectedPattern"
       [pattern]="truePattern"
-    
-
     ></app-credit-card>
   </div>
 
   <div class="theme-selector-wrapper">
-    <div>
+    <div class="pb">
       <h4 class="pl-2">Choose Colors</h4>
 
       <h5 class="pl-2">Header</h5>
 
       <app-theme-picker
-        class="pb"
+
         (selectedHeaderColorEmitter)="getSelectedHeaderColor($event)"
         [headerPicker]="true"
+        [colorsHeader]="colorsHeader"
+      
       ></app-theme-picker>
 
       <h5 class="pl-2">Footer</h5>
 
       <app-theme-picker
-        class="pb"
+
         (selectedFooterColorEmitter)="getSelectedFooterColor($event)"
         [footerPicker]="true"
+        [colorsFooter]="colorsFooter"
       ></app-theme-picker>
     </div>
-    <div>
+    <div class="pb">
       <h4 class="pl-2">Choose Pattern</h4>
       <app-theme-picker
-        class="pb"
+
         (selectedPatternEmitter)="getSelectedPattern($event)"
         [patternPicker]="true"
+        [colorsPattern]="colorsPattern"
       ></app-theme-picker>
     </div>
 
-    <div class="button">
+    <div class="button pb">
       <button (click)="saveCard()" [disabled]="selectedFooterColor == '' && (selectedHeaderColor !== '' || truePattern !== false)">Save Card</button>
     </div>
   </div>

@@ -7,9 +7,9 @@ import { colors_palette } from '../../utils/constants/constants';
 })
 export class CreditCardComponent implements OnInit {
   color = colors_palette
-  @Input ('backgroundFooter') backgroundFooter: string | undefined;
-  @Input ('backgroundHeader') backgroundHeader: string | undefined;
-  @Input ('patternHeader') patternHeader: string | undefined;
+  @Input ('backgroundFooter') backgroundFooter: any;
+  @Input ('backgroundHeader') backgroundHeader: any;
+  @Input ('patternHeader') patternHeader: any;
   @Input ('pattern') pattern:boolean = false
 
 

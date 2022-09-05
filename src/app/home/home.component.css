@@ -1,7 +1,6 @@
 .container {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
 }
 
 header {
@@ -37,14 +36,14 @@ header {
 }
 
 .arrow {
-  position: absolute;
+  position: fixed;
   bottom: 46px;
   right: 29px;
   z-index: 2;
 }
 
 .blob {
-    position: absolute;
+    position: fixed;
     bottom: -53px;
     width: 259px;
     fill: black;
@@ -72,3 +71,4 @@ button {
 .pb {
     padding-bottom: 1rem;
 }
+

@@ -4,6 +4,7 @@ import { CardsService } from '../shared/services/cards.service';
 import {
   colors_palette,
   colors_palette_header,
+  patterns,
 } from '../shared/utils/constants/constants';
 
 
@@ -16,7 +17,9 @@ export class HomeComponent implements OnInit {
   selectedFooterColor: string = '';
   selectedHeaderColor!: string;
   selectedPattern!: any;
-  color_default = colors_palette;
+  colorsHeader = colors_palette.map((c: any) => ({ color: c, selected: false }));
+colorsFooter = colors_palette.map((c: any) => ({ color: c, selected: false }));
+colorsPattern = patterns
   truePattern: boolean = false
 
   cards: any = [];
@@ -29,6 +32,7 @@ export class HomeComponent implements OnInit {
 
   getSelectedFooterColor(e: any) {
     this.selectedFooterColor = e;
+    this.findSelectedFooterColor(e)
 
   }
 
@@ -36,12 +40,14 @@ export class HomeComponent implements OnInit {
     this.selectedHeaderColor = e;
     this.truePattern = false
     this.selectedPattern = ''
+    this.findSelectedHeaderColor(e)
   }
 
   getSelectedPattern(p: any) {
   this.truePattern = true
   this.selectedPattern = p;
   this.selectedHeaderColor = '';
+  this.findSelectedPattern(p)
   }
 
   saveCard() {
@@ -72,5 +78,44 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/show-cards'])
 
     // this.cardsService.saveCards(this.cards)
+  }
+
+  findSelectedHeaderColor(color:any){
+
+    this.colorsPattern.forEach((p:any)=> {
+     p.selected = false;
+    })
+
+    this.colorsHeader.forEach((c:any) =>{
+      c.selected = false
+      if(color == c.color){
+        c.selected = true
+      }
+    })
+
+  }
+  findSelectedFooterColor(color:any){
+
+
+    this.colorsFooter.forEach((c:any) =>{
+      c.selected = false
+      if(color == c.color){
+        c.selected = true
+      }
+    })
+
+  }
+  findSelectedPattern(pattern:any){
+  
+    this.colorsHeader.forEach((c:any)=> {
+      c.selected = false;
+     })
+    this.colorsPattern.forEach((p:any) =>{
+      p.selected = false
+      if(pattern == p.pattern){
+        p.selected = true
+      }
+    })
+
   }
 }

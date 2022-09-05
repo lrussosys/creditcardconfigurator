@@ -9,8 +9,5 @@ export class CardsService {
 
     cards: any = []
 
-//   saveCards(cards: any) {
-//     this.cards = cards;
-//     console.log(this.cards)
-//   }
+
 }
