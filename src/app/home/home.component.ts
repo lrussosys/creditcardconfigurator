@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardsService } from '../shared/services/cards.service';
+import {
+  colors_palette_footer,
+  colors_palette_header,
+} from '../shared/utils/constants/constants';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +16,13 @@ export class HomeComponent implements OnInit {
   selectedHeaderColor!: string;
   selectedPattern!: any;
 
+  colors = colors_palette_footer;
   cards: any = [];
   constructor(private cardsService: CardsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('colori', this.colors)
+  }
 
   getSelectedFooterColor(e: any) {
     this.selectedFooterColor = e;
@@ -35,13 +42,13 @@ export class HomeComponent implements OnInit {
     console.log(this.selectedHeaderColor);
 
     let card = {
-        headerColor: this.selectedFooterColor,
-        headerPattern: this.selectedPattern,
-        footerColor: this.selectedFooterColor
-    }
+      headerColor: this.selectedFooterColor,
+      headerPattern: this.selectedPattern,
+      footerColor: this.selectedFooterColor,
+    };
 
-    this.cards.push(card)
-    console.log(this.cards)
+    this.cards.push(card);
+    console.log(this.cards);
 
     this.cardsService.cards.push(card);
     // this.cardsService.saveCards(this.cards)
