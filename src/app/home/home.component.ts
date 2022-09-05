@@ -9,13 +9,14 @@ import { colors_palette } from '../shared/utils/constants/constants';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  selectedFooterColor!: string;
+  selectedFooterColor: string = '';
   selectedHeaderColor!: string;
   selectedPattern!: any;
   color_default = colors_palette;
   truePattern: boolean = false
 
   cards: any = [];
+  card:any;
   constructor(private cardsService: CardsService) {}
 
   ngOnInit(): void {}
@@ -42,26 +43,27 @@ export class HomeComponent implements OnInit {
     console.log(this.selectedPattern);
     console.log(this.selectedHeaderColor);
 
-    let card = {};
+
 
     if (this.selectedPattern !== '') {
-    card = {
+    this.card = {
         headerPattern: this.selectedPattern,
         footerColor: this.selectedFooterColor,
         headerColor: ''
       };
     }else{
-      card = {
+      this.card = {
         headerColor: this.selectedHeaderColor,
         footerColor: this.selectedFooterColor,
         headerPattern: ''
       };
     }
-
-    this.cards.push(card);
+    console.log(this.card)
+    localStorage.setItem('card', this.card)
+    this.cards.push(this.card);
     console.log(this.cards);
+    this.cardsService.cards.push(this.card);
 
-    this.cardsService.cards.push(card);
     // this.cardsService.saveCards(this.cards)
   }
 }

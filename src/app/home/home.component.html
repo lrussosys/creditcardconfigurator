@@ -44,7 +44,7 @@
     </div>
 
     <div class="button">
-      <button (click)="saveCard()">Save Card</button>
+      <button (click)="saveCard()" [disabled]="selectedFooterColor == '' && (selectedHeaderColor !== '' || truePattern !== false) ">Save Card</button>
     </div>
   </div>
 
