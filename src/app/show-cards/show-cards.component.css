@@ -1,0 +1,16 @@
+.wrapper{
+    margin-bottom: 2rem;
+}
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 119, 255);
+}

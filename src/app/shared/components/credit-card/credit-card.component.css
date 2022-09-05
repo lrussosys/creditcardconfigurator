@@ -1,32 +1,41 @@
-#card-wrapper{
-    width: 100%;
+#card-wrapper {
     height: 100%;
     border-radius: 10px;
- overflow: hidden;
-}
-.header{
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-}
-.footer{
-    height: 40%;
-    display: flex;
-    justify-content: space-between;
+    overflow: hidden;
+    max-width: 310px;
+    margin: 0 auto;
 }
 
-.header h3{
-    padding-bottom: 1rem;
+.header {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-weight: bold;
 }
 
-.header, .footer{
-    padding: 1rem;
+.footer {
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: bold;
 }
-.date{
-    text-align: left;
+
+.header h3 {
+  padding-bottom: 1rem;
 }
-.cvv{
-    text-align: right;
+
+.header,
+.footer {
+  padding: 1rem;
+}
+
+.date {
+  text-align: left;
+}
+
+.cvv {
+  text-align: right;
 }
