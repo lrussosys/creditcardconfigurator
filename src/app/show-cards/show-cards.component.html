@@ -2,11 +2,9 @@
   <div *ngIf="cards">
     <div *ngFor="let c of cards" class="wrapper">
         <app-credit-card
-          [backgroundFooter]="c.footerColor"
-          [backgroundHeader]="
-            'linear-gradient(90deg, ' + c.headerColor + ' 0%, #000851 100%)'
-          "
-          [patternHeader]="c?.headerPattern"
+          [backgroundHeader]="c?.headerColor ? c?.headerColor : ''"
+          [backgroundFooter]="c?.footerColor"
+          [patternHeader]="c?.headerPattern ? c?.headerPattern : ''"
         ></app-credit-card>
       </div>
   </div>

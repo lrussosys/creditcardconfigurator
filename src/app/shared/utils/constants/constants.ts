@@ -5,3 +5,4 @@ export const colors_palette = [
   '#F9DA78',
   '#9ADEA8',
 ];
+
